@@ -1016,6 +1016,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.3.0.tgz#db7b55fee834dc8c2c484c696469e65bae2ee770"
   integrity sha512-Reer6rkLLcoOvB0dd66+Y7WrWVFH7sEEkF/4bJCIfsSKnTStTYaHtwIJAwbqnt9I392Tqvku0KkoqZOryWV9LQ==
 
+"@phosphor-icons/react@^2.0.8":
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@phosphor-icons/react/-/react-2.0.8.tgz#91e65beee7d3940a33624d8250955c2dba2e92dd"
+  integrity sha512-VWACI+MkRGpol4htOcVtWKaDCosrcuCg8toJfPS0osgVjxM8i/KoSZSPxQvG5XYPCI8iyJoHKRpSfzOISAXFyg==
+
 "@popperjs/core@^2.9.3":
   version "2.11.7"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.7.tgz#ccab5c8f7dc557a52ca3288c10075c9ccd37fff7"
