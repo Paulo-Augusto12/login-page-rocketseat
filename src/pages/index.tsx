@@ -1,5 +1,9 @@
+import { Text, Card } from "@chakra-ui/react"
 export default function Home() {
   return (
-   <h1>Hello world</h1>
+    <Card>
+
+      <Text color={'purple.900'} fontSize={36}>Hello world</Text>
+    </Card>
   )
 }
