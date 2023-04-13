@@ -151,7 +151,7 @@ export default function Home() {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            Github
+            GITHUB
           </Button>
         </Flex>
       </Flex>
