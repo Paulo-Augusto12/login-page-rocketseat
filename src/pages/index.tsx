@@ -1,6 +1,6 @@
-import { Text, Card } from "@chakra-ui/react"
+import { Text } from "@chakra-ui/react"
 export default function Home() {
   return (
-      <Text color={'purple.900'} fontFamily={'Roboto'}>Hello world</Text>
+      <Text color={'purple.500'} fontSize={36}>Hello world</Text>
   )
 }
