@@ -41,6 +41,13 @@ const config: ThemeConfig = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 };
-const useTheme = extendTheme({ colors, config, fonts, fontWeights });
+const useTheme = extendTheme({
+  colors,
+  config,
+  fonts,
+  fontWeights,
+  radii,
+  fontSizes,
+});
 
 export default useTheme;
