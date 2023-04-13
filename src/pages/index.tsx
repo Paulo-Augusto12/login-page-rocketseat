@@ -1,14 +1,39 @@
+// importações do chakra
+
 import {
   Button,
   Flex,
   Grid,
   Heading,
   Input,
+  InputGroup,
+  InputLeftElement,
   Link,
   Text,
 } from "@chakra-ui/react";
+
+//
+
+// components
+
 import { Divider } from "../../Components/Divider/Divider";
+
+//
+
+// Hook
+
+import { useHome } from "../hook/useHome";
+import {
+  At,
+  EnvelopeSimple,
+  GithubLogo,
+  LockSimple,
+} from "@phosphor-icons/react";
+
+//
+
 export default function Home() {
+  const hook = useHome();
   return (
     <Grid
       as={"main"}
@@ -33,23 +58,47 @@ export default function Home() {
         alignItems={"stretch"}
         padding={16}
       >
-        <Input
-          height={"50px"}
-          backgroundColor={"gray.800"}
-          focusBorderColor="purple.500"
-          borderRadius={"sm"}
-          placeholder="E-mail"
-          border={"none"}
-        />
-        <Input
-          height={"50px"}
-          backgroundColor={"gray.800"}
-          focusBorderColor="purple.500"
-          borderRadius={"sm"}
-          placeholder="Senha"
-          marginTop={2}
-          border={"none"}
-        />
+        <Flex flexDir={"column"} gap={2}>
+          <InputGroup>
+            <InputLeftElement
+              children={<At size={16} color="#202024" weight="fill" />}
+              pointerEvents={"none"}
+              height={"100%"}
+            />
+            <Input
+              height={"50px"}
+              backgroundColor={"gray.800"}
+              focusBorderColor="purple.500"
+              borderRadius={"sm"}
+              placeholder="E-mail"
+              border={"none"}
+              value={hook.email}
+              onChange={(e) => {
+                hook.setEmail(e.target.value);
+              }}
+            />
+          </InputGroup>
+          <InputGroup>
+            <InputLeftElement
+              children={<LockSimple size={16} weight="fill" color="#202024" />}
+              pointerEvents={"none"}
+              height={"100%"}
+            />
+            <Input
+              height={"50px"}
+              backgroundColor={"gray.800"}
+              focusBorderColor="purple.500"
+              borderRadius={"sm"}
+              placeholder="Senha"
+              border={"none"}
+              type="password"
+              value={hook.password}
+              onChange={(e) => {
+                hook.setPassword(e.target.value);
+              }}
+            />
+          </InputGroup>
+        </Flex>
         <Link
           alignSelf={"flex-start"}
           marginTop={2}
@@ -66,6 +115,9 @@ export default function Home() {
           backgroundColor={"purple.500"}
           borderRadius={"sm"}
           _hover={{ backgroundColor: "purple.600" }}
+          isDisabled={
+            !hook.email.trim() && !hook.password.trim() ? true : false
+          }
         >
           ENTRAR
         </Button>
@@ -95,6 +147,9 @@ export default function Home() {
             marginLeft={6}
             fontSize={"sm"}
             borderRadius={"sm"}
+            leftIcon={<GithubLogo size={15} color="#FFFF" weight="fill" />}
+            alignItems={"center"}
+            justifyContent={"center"}
           >
             Github
           </Button>
