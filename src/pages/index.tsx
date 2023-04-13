@@ -118,6 +118,9 @@ export default function Home() {
           isDisabled={
             !hook.email.trim() && !hook.password.trim() ? true : false
           }
+          onClick={() => {
+            hook.handleSubmitLogin(hook.email, hook.password);
+          }}
         >
           ENTRAR
         </Button>
