@@ -14,10 +14,6 @@ const customTheme = {
       800: "#121214",
     },
   },
-  fontSizes: {
-    ...theme.fontSizes,
-    "6xl": "54px",
-  },
   fontWeights: {
     normal: 400,
     medium: 500,
